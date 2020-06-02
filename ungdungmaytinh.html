@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <h1>Máy tính cơ bản</h1>
+    <table>
+        <table>
+        <tr>
+            <td><input type="text" id="o1"></td>
+            <td><input type="text" id="o2"></td>
+           
+        </tr>
+    </table>   
+        <tr>
+        <th><button type="button" id="cong" onclick="cong()">Cộng(+)</button></th>
+        <th><button type="button" id="tru" onclick="tru()"> Trừ(-)</button></th>
+        <th><button type="button" id="nhan" onclick="nhan()">Nhân(x)</button></th>
+        <th><button type="button" id="chia" onclick="chia()">Chia(/)</button></th>
+        </tr>
+    </table>
+    <script text="java/script">
+    function cong(){
+        var nhapgiatri1 = +document.getElementById('o1').value;
+        var nhapgiatri2 = +document.getElementById('o2').value;
+         alert(nhapgiatri1+nhapgiatri2);
+        }
+    function tru(){
+        var nhapgiatri1 = document.getElementById('o1').value;
+        var nhapgiatri2 = document.getElementById('o2').value;
+        alert(nhapgiatri1-nhapgiatri2);
+        }    
+    function nhan(){
+        var nhapgiatri1 = document.getElementById('o1').value;
+        var nhapgiatri2 = document.getElementById('o2').value;
+        alert(nhapgiatri1*nhapgiatri2)
+    }
+    function chia(){
+        var nhapgiatri1 = document.getElementById('o1').value;
+        var nhapgiatri2 = document.getElementById('o2').value;
+        alert(nhapgiatri1/nhapgiatri2)
+    }
+    </script>
+    
+</body>
+</html>
