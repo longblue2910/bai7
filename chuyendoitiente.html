@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Curency</th>
+            <th>To Curency</th>
+        </tr>
+        <tr>
+            <td> <input type="text" id="nhaptien" value=""> </td>
+            <td> 
+                <select name="vnd" id="tienviet">
+                    <option value="Vietnam">Việt Nam</option>
+                </select>
+            </td>
+            <td><select name="usd" id="my">
+                <option value="tienusd">USD</option>
+            </select>
+        </td>
+        <td >
+            <button onclick="gettext()" type="button"; > Convert </button>
+        </td>
+        </tr>
+    </table>
+    <script text="text/javascript">
+    function gettext(){
+        var nhaptien = document.getElementById('nhaptien').value;
+    alert(nhaptien/23000)
+
+    }
+        
+    </script>
+    
+</body>
+</html>
