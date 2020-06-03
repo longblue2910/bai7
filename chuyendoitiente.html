@@ -1,10 +1,12 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chuyển đổi tiền tệ</title>
 </head>
+
 <body>
     <table>
         <tr>
@@ -14,28 +16,53 @@
         </tr>
         <tr>
             <td> <input type="text" id="nhaptien" value=""> </td>
-            <td> 
-                <select name="vnd" id="tienviet">
+            <td>
+                <select name="vnd" id="tienviet" onchange="changeUnit()">
                     <option value="Vietnam">Việt Nam</option>
+                    <option value="USA">USA</option>
                 </select>
             </td>
-            <td><select name="usd" id="my">
-                <option value="tienusd">USD</option>
-            </select>
-        </td>
-        <td >
-            <button onclick="gettext()" type="button"; > Convert </button>
-        </td>
+            <td><select name="usd" id="quocgia">
+                    <option value="USA">USD</option>
+                    <option value="Vietnam">Vietnam</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="gettext()" type="button" ;> Convert </button>
+            </td>
         </tr>
     </table>
-    <script text="text/javascript">
-    function gettext(){
-        var nhaptien = document.getElementById('nhaptien').value;
-    alert(nhaptien/23000)
-
-    }
-        
-    </script>
     
+    
+    <script text="text/javascript">
+        function gettext() {
+            var nhaptien = document.getElementById('nhaptien').value
+            if (Vietnam = document.getElementById('tienviet').value) {
+                alert('USD ='+ nhaptien / 23000)
+            } else alert ('VND = ' + nhaptien*23000)
+            }
+    
+        
+        function changeUnit() {
+            var fromUnit = document.getElementById('tienviet').value;
+
+            var toUnit;
+
+            if (fromUnit === "Vietnam") {
+                toUnit = 'USA'
+
+            } else {
+                toUnit = 'Vietnam'
+
+            }
+
+            console.log(fromUnit, toUnit);
+
+            document.getElementById('my').value = toUnit;
+        }
+
+    </script>
+
 </body>
+
 </html>
